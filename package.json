@@ -1,0 +1,97 @@
+{
+  "_args": [
+    [
+      {
+        "name": "gitbook-plugin-docsearch",
+        "raw": "gitbook-plugin-docsearch@0.0.1",
+        "rawSpec": "0.0.1",
+        "scope": null,
+        "spec": "0.0.1",
+        "type": "version"
+      },
+      ""
+    ]
+  ],
+  "_from": "gitbook-plugin-docsearch@0.0.1",
+  "_id": "gitbook-plugin-docsearch@0.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/gitbook-plugin-docsearch",
+  "_nodeVersion": "7.0.0",
+  "_npmOperationalInternal": {
+    "host": "",
+    "tmp": ""
+  },
+  "_npmUser": {
+    "email": "",
+    "name": ""
+  },
+  "_npmVersion": "3.9.3",
+  "_phantomChildren": {
+    "core-util-is": "1.0.2",
+    "css-select": "1.2.0",
+    "dom-serializer": "0.1.0",
+    "domelementtype": "1.3.0",
+    "domutils": "1.5.1",
+    "entities": "1.1.1",
+    "inherits": "2.0.3",
+    "jsdom": "7.2.2",
+    "lodash": "4.17.4"
+  },
+  "_requested": {
+    "name": "gitbook-plugin-docsearch",
+    "raw": "gitbook-plugin-docsearch@0.0.1",
+    "rawSpec": "0.1.0",
+    "scope": null,
+    "spec": "0.0.1",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "",
+  "_shasum": "",
+  "_shrinkwrap": null,
+  "_spec": "",
+  "_where": "",
+  "author": {
+    "name": "shahin"
+  },
+  "dependencies": {
+    "cheerio": "^0.20.0"
+  },
+  "description": "GitBook Plugin to add algolia docsearch",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "",
+    "tarball": ""
+  },
+  "engines": {
+    "gitbook": "*"
+  },
+  "gitHead": "",
+  "keywords": [
+    "gitbook",
+    "plugin",
+    "docsearch"
+  ],
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "eugene@uilicious.com",
+      "name": "Eugene"
+    }
+  ],
+  "name": "gitbook-plugin-docsearch",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uilicious/gitbook-plugin-docsearch.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.0"
+}
