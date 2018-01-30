@@ -35,16 +35,33 @@ module.exports = {
             var $, $el, html;
             var pathFile = this.options.pluginsConfig.docSearch.apiKey && this.options.pluginsConfig.docSearch.index;
             if(pathFile){
-                var tmpl = '<div id="book-search-input">\n' +
+
+                var searchBox = '<div id="book-search-input">\n' +
                     '    <input type="text" id="book-doc-search-input" placeholder="Type to search">\n' +
-                    '</div>\n';
+                    '</div>';
+
+                if (this.options.pluginsConfig.docSearch.logo && this.options.pluginsConfig.docSearch.brandTitle) {
+                    var logo = '<img class="logo" src="/'+this.options.pluginsConfig.docSearch.logo+'"/>' +
+                        '<span>'+this.options.pluginsConfig.docSearch.brandTitle+'</span>';
+                }
+
                 urls.forEach(item => {
-                        html = fs.readFileSync(item.url, {encoding: 'utf-8'});
-                    $ = cheerio.load(html);
-                    $el = $('body .book-summary');
-                    $el.prepend(tmpl);
-                    fs.writeFileSync(item.url, $.root().html(), {encoding: 'utf-8'});
-                });
+                    html = fs.readFileSync(item.url, {encoding: 'utf-8'});
+                $ = cheerio.load(html);
+
+                $el = $('.book-summary');
+                $el.prepend(searchBox);
+
+                $el = $('.book-summary');
+                $el.prepend(logo);
+
+
+                $el = $('.summary li:first-child');
+                $el.remove();
+
+
+                fs.writeFileSync(item.url, $.root().html(), {encoding: 'utf-8'});
+            });
             }
 
         }
