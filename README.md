@@ -43,7 +43,7 @@ In order to customize the styling of your search experience you can supply a css
     }
 ```
 
-####Known issues
+#### Known issues
 
 The default behaviour of algolia search result prompt crops out.
 See bellow :
