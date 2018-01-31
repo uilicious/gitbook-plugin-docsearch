@@ -40,9 +40,8 @@ module.exports = {
                     '    <input type="text" id="book-doc-search-input" placeholder="Type to search">\n' +
                     '</div>';
 
-                if (this.options.pluginsConfig.docSearch.logo && this.options.pluginsConfig.docSearch.brandTitle) {
-                    var logo = '<img class="logo" src="/'+this.options.pluginsConfig.docSearch.logo+'"/>' +
-                        '<span>'+this.options.pluginsConfig.docSearch.brandTitle+'</span>';
+                if (this.options.pluginsConfig.docSearch.logo) {
+                    var logo = '<img class="logo" src="/'+this.options.pluginsConfig.docSearch.logo+'"/>';
                 }
 
                 urls.forEach(item => {
