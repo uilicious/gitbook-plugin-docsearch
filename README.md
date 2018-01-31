@@ -45,7 +45,9 @@ In order to customize the styling of your search experience you can supply a css
 
 ####Known issues
 The default behaviour of algolia search result prompt crops out.
-In order to fix it, apply the following css
+See bellow :
+![](cropped-out.png?raw=true)
+In order to fix it, apply the following css with styling
 
 ```
 .book-summary {
