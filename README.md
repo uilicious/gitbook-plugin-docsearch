@@ -44,9 +44,12 @@ In order to customize the styling of your search experience you can supply a css
 ```
 
 ####Known issues
+
 The default behaviour of algolia search result prompt crops out.
 See bellow :
-![](cropped-out.png?raw=true)
+
+![](cropped-out-2.png?raw=true)
+
 In order to fix it, apply the following css with styling
 
 ```
