@@ -57,3 +57,6 @@ In order to fix it, apply the following css with styling
     overflow-y: inherit;
 }
 ```
+
+##License & copyright
+Licensed under the [MIT License](LICENSE) 
