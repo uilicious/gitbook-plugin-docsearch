@@ -33,6 +33,7 @@ module.exports = {
 
         "finish": function () {
             var $, $el, html;
+            var logo;
             var pathFile = this.options.pluginsConfig.docSearch.apiKey && this.options.pluginsConfig.docSearch.index;
             if(pathFile){
 
@@ -41,7 +42,15 @@ module.exports = {
                     '</div>';
 
                 if (this.options.pluginsConfig.docSearch.logo) {
-                    var logo = '<img class="logo" src="/'+this.options.pluginsConfig.docSearch.logo+'"/>';
+
+                    if (this.options.pluginsConfig.docSearch.brandUrl) {
+                        logo = '<a href="'+this.options.pluginsConfig.docSearch.brandUrl+'">' +
+                            ' <img class="logo" src="/'+this.options.pluginsConfig.docSearch.logo+'"/>'+
+                            '</a>';
+                    }
+                    else {
+                        logo = '<img class="logo" src="/'+this.options.pluginsConfig.docSearch.logo+'"/>';
+                    }
                 }
 
                 urls.forEach(item => {
