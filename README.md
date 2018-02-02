@@ -58,5 +58,5 @@ In order to fix it, apply the following css with styling
 }
 ```
 
-##License & copyright
+## License & copyright
 Licensed under the [MIT License](LICENSE) 
