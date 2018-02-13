@@ -1,6 +1,6 @@
 var fs = require('fs');
+var path = require('path');
 var cheerio = require('cheerio');
-var url = require('url');
 
 var urls = [];
 
@@ -24,9 +24,12 @@ module.exports = {
             if (lang) lang = lang + '/';
 
             var outputUrl = this.output.toURL('_book/' + lang + page.path);
-            urls.push({
-                url: outputUrl + (outputUrl.substr(-5, 5) !== '.html' ? 'index.html' : '')
-            });
+            var normalizedUrl = outputUrl + (path.extname(outputUrl) !== '.html' ? 'index.html' : '');
+            if (!urls.some(item => item.url === normalizedUrl)) {
+                urls.push({
+                    url: normalizedUrl
+                });
+            }
 
             return page;
         },
@@ -55,18 +58,15 @@ module.exports = {
 
                 urls.forEach(item => {
                     html = fs.readFileSync(item.url, {encoding: 'utf-8'});
-                $ = cheerio.load(html);
+                    $ = cheerio.load(html);
 
-                $el = $('.book-summary');
-                $el.prepend(searchBox);
-
-                $el = $('.book-summary');
-                $el.prepend(logo);
-
-
-                $el = $('.summary li:first-child');
-                $el.remove();
-
+                    if ($('#book-search-input').length === 0) {
+                        $el = $('.book-summary');
+                        $el.prepend(searchBox);
+                        if (logo) {
+                            $el.prepend(logo);
+                        }
+                    }
 
                 fs.writeFileSync(item.url, $.root().html(), {encoding: 'utf-8'});
             });
