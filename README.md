@@ -13,7 +13,7 @@ Gitbook comes with default search option. In order to use this plugin, need to d
 "plugins": [
     "-search",
     "-lunr",
-    "docSearch"
+    "docsearch"
   ]
 ```
 add the following plugin configurations in book.json
@@ -32,6 +32,8 @@ add the following plugin configurations in book.json
 ```
 
 `logo` and `brandUrl` is optional. So you can choose to leave them empty if you do want want to put your brand logo in Gitbook.
+
+But, if you want to use `logo` then put the logo image into the root directory of your Gitbook project.
 
 In order to customize the styling of your search experience you can supply a css separately as bellow inside book.json
 
